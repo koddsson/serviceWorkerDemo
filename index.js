@@ -6,8 +6,8 @@ if ('serviceWorker' in navigator) {
     Notification.requestPermission(function(permission) {
       if (permission === 'granted') {
         registration.showNotification('Service Worker', {
-          body: 'ServiceWorker registration successful with scope: ' +
-            registration.scope
+          body: 'Hello from the Service Worker!',
+          icon: 'glasses36.png'
         });
       } else {
         alert('whyyyyy?');
