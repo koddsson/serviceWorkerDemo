@@ -1,0 +1,32 @@
+body {
+  font-size: 120%;
+  flex-direction: column;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 100%;
+  }
+}
+
+footer, header, main {
+  width: 100%;
+}
+
+header, footer {
+  text-align: center;
+}
+
+main {
+  flex-grow: 2;
+}
+
+main img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+}
