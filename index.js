@@ -4,11 +4,14 @@ if ('serviceWorker' in navigator) {
     console.log('ServiceWorker registration successful with scope: ',
       registration.scope);
     Notification.requestPermission(function(permission) {
-      console.log(permission);
-    });
-    registration.showNotification('Service Worker', {
-      body: 'ServiceWorker registration successful with scope: ' +
-        registration.scope
+      if (permission === 'granted') {
+        registration.showNotification('Service Worker', {
+          body: 'ServiceWorker registration successful with scope: ' +
+            registration.scope
+        });
+      } else {
+        alert('whyyyyy?');
+      }
     });
   }).catch(function(err) {
     // registration failed :(
