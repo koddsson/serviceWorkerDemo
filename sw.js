@@ -1,0 +1,1 @@
+importScripts('cachePolyfill/index.js');
